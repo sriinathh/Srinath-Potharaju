@@ -9,7 +9,11 @@ const PORT = process.env.PORT || 5000;
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 
 // Initialize Resend
-const resend = new Resend(RESEND_API_KEY);
+// Initialize Resend (only if API key present)
+if (!RESEND_API_KEY) {
+  console.warn('⚠️ RESEND_API_KEY is not set. Email sending will fail until this is configured in your environment.');
+}
+const resend = RESEND_API_KEY ? new Resend(RESEND_API_KEY) : null;
 
 // Middleware
 app.use(cors({
@@ -64,8 +68,16 @@ app.post('/api/contact', async (req, res) => {
 
     console.log(`Sending email from ${name} (${email}) with subject: ${subject}`);
 
+    // Ensure resend client is available
+    if (!resend) {
+      console.error('Attempted to send email but RESEND_API_KEY is missing');
+      return res.status(500).json({ success: false, message: 'Email service not configured. RESEND_API_KEY is missing.' });
+    }
+
     // Send email using Resend
-    const { data, error } = await resend.emails.send({
+    let data, error;
+    try {
+      const result = await resend.emails.send({
       from: 'Srinath Portfolio <onboarding@resend.dev>',
       to: 'psrinath821@gmail.com',
       subject: `Portfolio Contact: ${subject}`,
@@ -424,11 +436,16 @@ app.post('/api/contact', async (req, res) => {
       reply_to: email
     });
 
+    } catch (err) {
+      error = err;
+    }
+
     if (error) {
-      console.error('Resend error:', error);
+      console.error('Resend error:', error && error.message ? error.message : error);
+      // Include error message in response to aid debugging (safe to remove later)
       return res.status(500).json({
         success: false,
-        message: 'Failed to send email. Please try again later.'
+        message: 'Failed to send email. ' + (error && error.message ? error.message : 'Please try again later.')
       });
     }
 
