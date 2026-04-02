@@ -435,6 +435,8 @@ app.post('/api/contact', async (req, res) => {
       `,
       reply_to: email
     });
+      // store the result for logging/response
+      data = result;
 
     } catch (err) {
       error = err;
@@ -442,14 +444,15 @@ app.post('/api/contact', async (req, res) => {
 
     if (error) {
       console.error('Resend error:', error && error.message ? error.message : error);
-      // Include error message in response to aid debugging (safe to remove later)
       return res.status(500).json({
         success: false,
-        message: 'Failed to send email. ' + (error && error.message ? error.message : 'Please try again later.')
+        message: 'Failed to send email. ' + (error && error.message ? error.message : 'Please try again later.'),
+        error: error && error.message ? error.message : String(error)
       });
     }
 
-    console.log('Email sent successfully:', data);
+    // Log full response for debugging (can be removed later)
+    console.log('Email sent successfully. Resend response:', data);
     res.status(200).json({
       success: true,
       message: 'Thank you for your message! I will get back to you soon.'
@@ -467,6 +470,23 @@ app.post('/api/contact', async (req, res) => {
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'OK', timestamp: new Date().toISOString() });
+});
+
+// Resend API key test endpoint
+app.get('/api/test-resend', async (req, res) => {
+  if (!resend) return res.status(500).json({ ok: false, message: 'RESEND_API_KEY not configured' });
+  try {
+    const testResult = await resend.emails.send({
+      from: 'onboarding@resend.dev',
+      to: 'onboarding@resend.dev',
+      subject: 'Resend API Key test',
+      html: '<div>Resend API key test</div>'
+    });
+    return res.json({ ok: true, result: testResult });
+  } catch (err) {
+    console.error('Resend test error:', err);
+    return res.status(500).json({ ok: false, error: err && err.message ? err.message : String(err) });
+  }
 });
 
 // Start server
