@@ -145,6 +145,31 @@
                                 <i class="fas fa-leaf theme-icon"></i>
                             </div>
                         </div>
+
+                        <!-- Compact extras: pricing, recent clients, quick contact, testimonial -->
+                        <div class="freelance-compact" aria-hidden="false">
+                            <div class="pricing-row">
+                                <span class="pricing-label">Est. rate</span>
+                                <span class="pricing-badge">$25-45/hr</span>
+                            </div>
+
+                            <div class="client-logos" aria-label="Recent clients">
+                                <img src="assets/client1.png" alt="client" class="client-logo" onerror="this.style.display='none'">
+                                <img src="assets/client2.png" alt="client" class="client-logo" onerror="this.style.display='none'">
+                                <img src="assets/client3.png" alt="client" class="client-logo" onerror="this.style.display='none'">
+                            </div>
+
+                            <div class="contact-shortcuts">
+                                <a class="contact-pill" href="mailto:sri.nxth@yahoo.com"><i class="fas fa-envelope"></i> Email</a>
+                                <a class="contact-pill" href="https://wa.me/919000000000" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                            </div>
+
+                            <div class="testimonial-compact" aria-label="Short testimonial">
+                                <div class="quote">“Delivered production-ready code fast — excellent collaboration.”</div>
+                                <div class="quote-author">— Client, Startup</div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 
@@ -2249,315 +2274,175 @@
         </style>
     </section>
 
-    <!-- 🏅 Certifications & Achievements Section -->
+    <!-- 🏅 Certifications & Achievements Section (theme-aware) -->
     <section class="certifications" id="certifications">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">🏅 Certifications & Professional Credentials</h2>
                 <p class="section-subtitle">Industry-recognized certifications demonstrating expertise and commitment to excellence</p>
             </div>
-            
-            <div class="certifications-grid">
-                <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="certifications-grid" role="list">
+                <!-- Each card uses data-* attributes for modal and download -->
+                <article class="cert-card" role="listitem" tabindex="0"
+                         data-title="MERN Stack Development Workshop"
+                         data-organization="Brainovision & MLRIT"
+                         data-year="2025"
+                         data-img="assets/certs/mern-workshop.jpg"
+                         data-file="assets/certs/mern-workshop.pdf">
                     <div class="cert-image-container">
-                        <div class="cert-icon">🎓</div>
+                        <img src="assets/certs/mern-thumb.jpg" alt="MERN Workshop" class="cert-thumb" onerror="this.style.display='none'">
                     </div>
                     <h3 class="cert-title">MERN Stack Development Workshop</h3>
-                    <p class="cert-organization">Brainovision & MLRIT</p>
+                    <p class="cert-organization">Brainovision &amp; MLRIT</p>
                     <span class="cert-year">2025</span>
-                    <button class="cert-preview-btn" onclick="alert('Certificate Preview: MERN Stack Development')">
-                        <i class="fas fa-eye"></i> View
-                    </button>
-                </div>
-                
-                <div class="cert-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="cert-actions">
+                        <button class="cert-preview-btn" data-action="view"> <i class="fas fa-eye"></i> View</button>
+                        <a class="cert-download-btn" href="assets/certs/mern-workshop.pdf" download> <i class="fas fa-download"></i> Download</a>
+                    </div>
+                </article>
+
+                <article class="cert-card" role="listitem" tabindex="0"
+                         data-title="AI Chatbot Development"
+                         data-organization="Bits Pilani"
+                         data-year="2024"
+                         data-img="assets/certs/ai-chatbot.jpg"
+                         data-file="assets/certs/ai-chatbot.pdf">
                     <div class="cert-image-container">
-                        <div class="cert-icon">🤖</div>
+                        <img src="assets/certs/ai-thumb.jpg" alt="AI Chatbot" class="cert-thumb" onerror="this.style.display='none'">
                     </div>
                     <h3 class="cert-title">AI Chatbot Development</h3>
-                    <p class="cert-organization">Bits Pilani 2026</p>
+                    <p class="cert-organization">Bits Pilani</p>
                     <span class="cert-year">2024</span>
-                    <button class="cert-preview-btn" onclick="alert('Certificate Preview: AI Chatbot Development')">
-                        <i class="fas fa-eye"></i> View
-                    </button>
-                </div>
-                
-                <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cert-actions">
+                        <button class="cert-preview-btn" data-action="view"> <i class="fas fa-eye"></i> View</button>
+                        <a class="cert-download-btn" href="assets/certs/ai-chatbot.pdf" download> <i class="fas fa-download"></i> Download</a>
+                    </div>
+                </article>
+
+                <article class="cert-card" role="listitem" tabindex="0"
+                         data-title="UI/UX Design Excellence"
+                         data-organization="Design Challenge"
+                         data-year="2024"
+                         data-img="assets/certs/uiux.jpg"
+                         data-file="assets/certs/uiux.pdf">
                     <div class="cert-image-container">
-                        <div class="cert-icon">🎨</div>
+                        <img src="assets/certs/uiux-thumb.jpg" alt="UI/UX" class="cert-thumb" onerror="this.style.display='none'">
                     </div>
                     <h3 class="cert-title">UI/UX Design Excellence</h3>
-                    <p class="cert-organization">Winner - Design Challenge</p>
+                    <p class="cert-organization">Design Challenge</p>
                     <span class="cert-year">2024</span>
-                    <button class="cert-preview-btn" onclick="alert('Certificate Preview: UI/UX Design Excellence')">
-                        <i class="fas fa-eye"></i> View
-                    </button>
-                </div>
-                
-                
+                    <div class="cert-actions">
+                        <button class="cert-preview-btn" data-action="view"> <i class="fas fa-eye"></i> View</button>
+                        <a class="cert-download-btn" href="assets/certs/uiux.pdf" download> <i class="fas fa-download"></i> Download</a>
+                    </div>
+                </article>
             </div>
         </div>
-        
+
         <style>
-            .certifications {
-                padding: 120px 0;
-                background: #ffffff;
-                position: relative;
-                overflow: hidden;
-            }
-            
-            .certifications::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: radial-gradient(circle at 30% 20%, rgba(102,126,234,0.05) 0%, transparent 50%),
-                           radial-gradient(circle at 70% 80%, rgba(118,75,162,0.03) 0%, transparent 50%);
-                pointer-events: none;
-            }
-            
-            .certifications .section-title {
-                color: #00ADB5;
-                text-shadow: none;
-            }
-            
-            .certifications .section-subtitle {
-                color: #666;
-            }
-            
-            .certifications-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 30px;
-                margin-top: 60px;
-            }
-            
-            .cert-card {
-                background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-                backdrop-filter: blur(20px);
-                border: 1px solid rgba(102,126,234,0.1);
-                border-radius: 20px;
-                padding: 40px 30px;
-                text-align: center;
-                position: relative;
-                overflow: hidden;
-                transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                cursor: pointer;
-                box-shadow: 0 4px 20px rgba(102,126,234,0.08);
-            }
-            
-            .cert-card::before {
-                content: '';
-                position: absolute;
-                top: -50%;
-                left: -50%;
-                width: 200%;
-                height: 200%;
-                background: linear-gradient(45deg, transparent, rgba(102,126,234,0.1), transparent);
-                transform: rotate(45deg);
-                transition: all 0.6s ease;
-                opacity: 0;
-            }
-            
-            .cert-card:hover {
-                transform: translateY(-15px) scale(1.05);
-                box-shadow: 0 25px 50px rgba(102,126,234,0.2), 
-                           0 0 0 1px rgba(102,126,234,0.2);
-                border-color: rgba(102,126,234,0.3);
-            }
-            
-            .cert-card:hover::before {
-                opacity: 1;
-                transform: translateX(100%) translateY(100%) rotate(45deg);
-            }
-            
-            .cert-icon {
-                font-size: 3rem;
-                margin-bottom: 20px;
-                animation: certFloat 3s ease-in-out infinite;
-                display: block;
-            }
-            
-            .cert-title {
-                font-size: 1.4rem;
-                font-weight: 700;
-                color: #333;
-                margin: 0 0 15px 0;
-                line-height: 1.3;
-            }
-            
-            .cert-organization {
-                color: #666;
-                font-size: 1rem;
-                margin: 0 0 15px 0;
-                font-weight: 500;
-            }
-            
-            .cert-year {
-                background: linear-gradient(135deg, #ff6b9d, #c44569);
-                color: white;
-                padding: 8px 16px;
-                border-radius: 25px;
-                font-size: 0.9rem;
-                font-weight: 600;
-                display: inline-block;
-                box-shadow: 0 4px 15px rgba(255,107,157,0.3);
-            }
-            
-            .cert-glow {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 100px;
-                height: 100px;
-                background: radial-gradient(circle, rgba(102,126,234,0.1) 0%, transparent 70%);
-                transform: translate(-50%, -50%);
-                border-radius: 50%;
-                opacity: 0;
-                transition: all 0.4s ease;
-            }
-            
-            .cert-card:hover .cert-glow {
-                opacity: 1;
-                width: 200px;
-                height: 200px;
-            }
-            
-            @keyframes certFloat {
-                0%, 100% { transform: translateY(0px) rotate(0deg); }
-                33% { transform: translateY(-10px) rotate(5deg); }
-                66% { transform: translateY(-5px) rotate(-3deg); }
-            }
-            
-            @media (max-width: 768px) {
-                .certifications-grid {
-                    grid-template-columns: 1fr;
-                    gap: 20px;
-                }
-                
-                .cert-card {
-                    padding: 30px 20px;
-                }
-            }
-            
-            /* Theme Support for Certifications */
-            [data-theme="dark"] .certifications {
-                background: #1a1a1a;
-            }
-            
-            [data-theme="dark"] .certifications::before {
-                background: radial-gradient(circle at 30% 20%, rgba(102,126,234,0.1) 0%, transparent 50%),
-                           radial-gradient(circle at 70% 80%, rgba(118,75,162,0.08) 0%, transparent 50%);
-            }
-            
-            [data-theme="dark"] .certifications .section-title {
-                color: #ffffff;
-            }
-            
-            [data-theme="dark"] .certifications .section-subtitle {
-                color: #cccccc;
-            }
-            
-            [data-theme="dark"] .cert-card {
-                background: linear-gradient(135deg, #2a2a2a 0%, #333333 100%);
-                border-color: rgba(102,126,234,0.2);
-                box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-            }
-            
-            [data-theme="dark"] .cert-card:hover {
-                box-shadow: 0 25px 50px rgba(0,0,0,0.4), 0 0 0 1px rgba(102,126,234,0.3);
-            }
-            
-            [data-theme="dark"] .cert-title {
-                color: #ffffff;
-            }
-            
-            [data-theme="dark"] .cert-organization {
-                color: #cccccc;
-            }
-            
-            [data-theme="ocean"] .certifications {
-                background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
-            }
-            
-            [data-theme="ocean"] .certifications .section-title {
-                color: white;
-                text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-            }
-            
-            [data-theme="ocean"] .certifications .section-subtitle {
-                color: rgba(255,255,255,0.9);
-            }
-            
-            [data-theme="ocean"] .cert-card {
-                background: rgba(255,255,255,0.1);
-                backdrop-filter: blur(20px);
-                border: 1px solid rgba(255,255,255,0.2);
-            }
-            
-            [data-theme="ocean"] .cert-title {
-                color: white;
-            }
-            
-            [data-theme="ocean"] .cert-organization {
-                color: rgba(255,255,255,0.8);
-            }
-            
-            [data-theme="sunset"] .certifications {
-                background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
-            }
-            
-            [data-theme="sunset"] .certifications .section-title {
-                color: white;
-                text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-            }
-            
-            [data-theme="sunset"] .certifications .section-subtitle {
-                color: rgba(255,255,255,0.9);
-            }
-            
-            [data-theme="sunset"] .cert-card {
-                background: rgba(255,255,255,0.1);
-                backdrop-filter: blur(20px);
-                border: 1px solid rgba(255,255,255,0.2);
-            }
-            
-            [data-theme="sunset"] .cert-title {
-                color: white;
-            }
-            
-            [data-theme="sunset"] .cert-organization {
-                color: rgba(255,255,255,0.8);
-            }
-            
-            [data-theme="forest"] .certifications {
-                background: linear-gradient(135deg, #059669 0%, #10b981 100%);
-            }
-            
-            [data-theme="forest"] .certifications .section-title {
-                color: white;
-                text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-            }
-            
-            [data-theme="forest"] .certifications .section-subtitle {
-                color: rgba(255,255,255,0.9);
-            }
-            
-            [data-theme="forest"] .cert-card {
-                background: rgba(255,255,255,0.1);
-                backdrop-filter: blur(20px);
-                border: 1px solid rgba(255,255,255,0.2);
-            }
-            
-            [data-theme="forest"] .cert-title {
-                color: white;
-            }
-            
-            [data-theme="forest"] .cert-organization {
-                color: rgba(255,255,255,0.8);
-            }
+        /* Theme-aware certifications styles using CSS variables */
+        :root{
+            --cert-gap: 22px;
+            --cert-radius: 16px;
+            --cert-padding: 18px;
+            --cert-accent-1: rgba(118,75,162,0.95);
+            --cert-accent-2: rgba(102,126,234,0.95);
+        }
+
+        .certifications{
+            padding: 64px 0;
+            background: var(--section-bg, transparent);
+            color: var(--text-primary, #111);
+        }
+
+        .certifications .section-title{ color: var(--primary-color, var(--text-primary)); margin-bottom:6px }
+        .certifications .section-subtitle{ color: var(--text-secondary, #777); margin-bottom:18px }
+
+        .certifications-grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--cert-gap);
+            margin-top: 18px;
+            align-items: start;
+        }
+
+        .cert-card{
+            --card-glass: rgba(255,255,255,0.06);
+            --card-border: rgba(255,255,255,0.06);
+            position: relative;
+            padding: var(--cert-padding);
+            border-radius: var(--cert-radius);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap:12px;
+            background: linear-gradient(180deg, rgba(var(--card-bg-rgb,255,255,255),0.04), rgba(var(--card-bg-rgb,255,255,255),0.02));
+            backdrop-filter: blur(6px) saturate(120%);
+            -webkit-backdrop-filter: blur(6px) saturate(120%);
+            border: 1px solid var(--card-border);
+            transition: transform .36s cubic-bezier(.2,.9,.2,1), box-shadow .36s, border-color .36s;
+        }
+
+        /* colorful, theme-aware soft border glow using pseudo-element */
+        .cert-card::before{
+            content: '';
+            position: absolute; inset: -1px; z-index: 0; border-radius: inherit;
+            background: linear-gradient(90deg, var(--cert-accent-1), var(--cert-accent-2));
+            filter: blur(18px) saturate(140%);
+            opacity: 0.08;
+            pointer-events: none;
+        }
+
+        .cert-card > *{ position: relative; z-index: 1 }
+
+        .cert-card:hover, .cert-card:focus{
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.18), 0 4px 30px rgba(0,0,0,0.08);
+            border-color: rgba(var(--accent-rgb,102,126,234),0.24);
+        }
+
+        .cert-image-container{ width:100%; aspect-ratio: 16/9; display:flex; align-items:center; justify-content:center; overflow:hidden; border-radius:10px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02)); }
+        .cert-thumb{ width:100%; height:100%; object-fit:cover; display:block; transform-origin:center; transition: transform .5s ease; }
+        .cert-card:hover .cert-thumb{ transform: scale(1.06); }
+
+        .cert-title{ font-size:1.06rem; font-weight:700; color:var(--text-primary); margin:6px 0 0 0; }
+        .cert-organization{ color:var(--text-secondary); font-size:0.95rem; margin:0; }
+
+        .cert-year{
+            display:inline-block; margin-top:8px; padding:6px 12px; border-radius:999px;
+            background: linear-gradient(90deg, rgba(var(--accent-rgb,118,75,162),0.12), rgba(var(--accent-rgb,102,126,234),0.06));
+            color:var(--primary-color); font-weight:700; font-size:0.82rem;
+            box-shadow: 0 4px 14px rgba(var(--accent-rgb,118,75,162),0.06);
+        }
+
+        .cert-actions{ display:flex; gap:10px; margin-top:10px; }
+        .cert-actions .cert-preview-btn, .cert-actions .cert-download-btn{
+            padding:8px 12px; border-radius:12px; border:1px solid transparent; background:linear-gradient(90deg, rgba(var(--accent-rgb,118,75,162),0.12), rgba(var(--accent-rgb,102,126,234),0.06)); color:var(--primary-color); cursor:pointer; text-decoration:none; display:inline-flex; gap:8px; align-items:center; font-weight:600; backdrop-filter: blur(4px);
+        }
+        .cert-actions .cert-preview-btn:hover, .cert-actions .cert-download-btn:hover{ box-shadow: 0 10px 30px rgba(var(--accent-rgb,102,126,234),0.12); transform: translateY(-3px); }
+
+        /* small year badge in top-right */
+        .cert-card .cert-year-badge{ position:absolute; top:12px; right:12px; z-index:2; font-size:0.78rem; padding:6px 10px; border-radius:12px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04); }
+
+        /* subtle entrance animation (will be triggered by intersection observer if present) */
+        @keyframes fadeInUp { from { opacity:0; transform: translateY(12px);} to { opacity:1; transform: translateY(0);} }
+        .cert-card{ opacity:0; transform: translateY(12px); animation: fadeInUp .6s ease forwards; }
+
+        /* Responsive grid */
+        @media (max-width: 1100px){ .certifications-grid{ grid-template-columns: repeat(2,1fr); } }
+        @media (max-width: 680px){ .certifications-grid{ grid-template-columns: 1fr; } .cert-image-container{ aspect-ratio: 4/3; } }
+
+        /* Theme adjustments (no hardcoded dark) */
+        [data-theme="dark"] .cert-card{ --card-bg-rgb:20,20,20; --card-border: rgba(255,255,255,0.04); }
+        [data-theme="light"] .cert-card{ --card-bg-rgb:255,255,255; --card-border: rgba(0,0,0,0.06); }
+
+        /* Make sure images that fail to load don't leave blank space */
+        .cert-thumb[style*="display:none"]{ display:none !important }
+
+        /* Compact actions on mobile */
+        @media (max-width:420px){ .cert-actions{ gap:8px; } .cert-actions .cert-preview-btn, .cert-actions .cert-download-btn{ padding:7px 10px; font-size:0.92rem } }
+
         </style>
     </section>
 
@@ -3796,89 +3681,230 @@
     </section>
 
     <!-- 💼 Freelance Availability - Premium Section -->
-    <section class="freelance" id="freelance">
+    <section class="freelance" id="freelance" role="region" aria-labelledby="freelance-heading">
         <div class="freelance-container">
-            <!-- Section Header -->
-            <div class="freelance-header-section" data-aos="fade-up">
-                <div class="section-label">
-                    <span class="label-badge">🚀 AVAILABLE FOR PROJECTS</span>
-                </div>
-                <h2 class="freelance-header">✨ Available for Freelance</h2>
-                <p class="freelance-sub">I'm actively taking on freelance projects and collaborations in modern web technologies, full-stack development, and AI-powered solutions. Fast turnaround, clear communication, and production-ready code.</p>
-            </div>
+            <style>
+                /* Scoped responsive rules for freelance stats and layout */
+                #freelance .freelance-hero {
+                    display: flex;
+                    gap: 32px;
+                    align-items: stretch;
+                    flex-wrap: wrap;
+                }
 
-            <!-- Services Grid -->
-            <div class="freelance-services-grid" data-aos="fade-up" data-aos-delay="100">
-                <!-- Web Development Service -->
-                <div class="service-card service-card-1">
-                    <div class="service-icon-wrapper">
-                        <div class="service-icon">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <div class="service-glow"></div>
+                #freelance .freelance-left {
+                    flex: 1 1 380px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center; /* vertically center left content */
+                    gap: 14px;
+                    max-width: 640px;
+                }
+
+                #freelance .freelance-right {
+                    flex: 1 1 420px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                /* Stats layout (right side) */
+                #freelance .freelance-stats {
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    justify-content: flex-end;
+                    flex-wrap: wrap;
+                }
+
+                #freelance .freelance-stats .stat-item {
+                    background: var(--glass-bg, rgba(255,255,255,0.03));
+                    border: 1px solid var(--glass-border, rgba(255,255,255,0.06));
+                    backdrop-filter: var(--backdrop-blur, blur(8px));
+                    padding: 14px 18px;
+                    border-radius: 12px;
+                    min-width: 110px;
+                    text-align: center;
+                    box-shadow: 0 6px 20px rgba(102,126,234,0.06);
+                    transition: transform .22s ease, box-shadow .22s ease;
+                }
+
+                #freelance .freelance-stats .stat-item:focus,
+                #freelance .freelance-stats .stat-item:hover {
+                    transform: translateY(-6px);
+                    box-shadow: 0 12px 30px rgba(102,126,234,0.12);
+                }
+
+                #freelance .freelance-stats .stat-number {
+                    font-size: 1.5rem;
+                    font-weight: 800;
+                    color: var(--text-primary, #fff);
+                    display: block;
+                }
+
+                #freelance .freelance-stats .stat-label {
+                    color: var(--text-light, rgba(255,255,255,0.8));
+                    font-size: 0.9rem;
+                    margin-top: 6px;
+                }
+
+                /* Compact left stats inside freelance-extras (mobile friendly) */
+                #freelance .left-stats-row { display:flex; gap:10px; flex-wrap:wrap; }
+                #freelance .left-stats-row .stat-pill { background: var(--glass-bg); border-radius:12px; padding:8px 12px; display:flex; gap:8px; align-items:center; }
+                #freelance .left-stats-row .stat-num { font-weight:700; color:var(--text-primary); }
+
+                /* Responsive breakpoints */
+                @media (max-width: 980px) {
+                    #freelance .freelance-hero { gap:20px; }
+                    #freelance .freelance-left { flex: 1 1 100%; max-width: 100%; }
+                    #freelance .freelance-right { flex: 1 1 100%; }
+                    #freelance .freelance-stats { justify-content: center; gap: 12px; }
+                    #freelance .freelance-stats .stat-item { min-width: 32%; flex: 1 1 32%; }
+                }
+
+                @media (max-width: 520px) {
+                    #freelance .freelance-hero { padding: 0 12px; }
+                    #freelance .freelance-stats { gap: 10px; }
+                    #freelance .freelance-stats .stat-item { min-width: 100%; flex: 1 1 100%; }
+                    #freelance .freelance-left { padding-bottom: 8px; }
+                    #freelance .freelance-ctas { display:flex; flex-direction:column; gap:10px; }
+                    #freelance .tech-stack-inline { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+                }
+            </style>
+            <!-- Top: Left (header + CTAs) / Right (service cards) -->
+            <div class="freelance-hero">
+                <div class="freelance-left" data-aos="fade-up">
+                    <div class="section-label">
+                        <span class="label-badge">🚀 AVAILABLE FOR PROJECTS</span>
                     </div>
-                    <h3 class="service-title">Web Development</h3>
-                    <p class="service-description">Modern, responsive websites and web applications built with cutting-edge frameworks. React, Vue, Angular, Next.js, and more.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i>Responsive Design</li>
-                        <li><i class="fas fa-check-circle"></i>SEO Optimized</li>
-                        <li><i class="fas fa-check-circle"></i>Performance Focused</li>
-                        <li><i class="fas fa-check-circle"></i>Production Ready</li>
-                    </ul>
+                    <h2 id="freelance-heading" class="freelance-header">✨ Available for Freelance</h2>
+                    <p class="freelance-sub">I'm actively taking on freelance projects and collaborations in modern web technologies, full-stack development, and AI-powered solutions. Fast turnaround, clear communication, and production-ready code.</p>
+
+                    <div class="freelance-ctas">
+                        <a href="#contact" class="cta-button cta-primary" aria-label="Hire me now">
+                            <i class="fas fa-rocket" aria-hidden="true"></i>
+                            <span>Hire Me Now</span>
+                        </a>
+                        <a href="#" class="cta-button cta-secondary" data-whatsapp="9705149936" aria-label="Message on WhatsApp">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                            <span>Get in Touch</span>
+                        </a>
+                    </div>
+
+                    <!-- Added extras to fill left column and improve balance -->
+                    <div class="freelance-extras" aria-hidden="false">
+                        <div class="availability-badge" aria-label="Availability">Available: <strong>Immediate start</strong></div>
+
+                        <ul class="quick-highlights" aria-label="Freelance highlights">
+                            <li>Fast turnaround & iterative delivery</li>
+                            <li>Transparent pricing & milestones</li>
+                            <li>Remote-first, timezone-friendly</li>
+                            <li>NDA & secure handling available</li>
+                        </ul>
+
+                        <div class="tech-stack-inline" aria-label="Primary tech stack">
+                            <span class="tech-pill"><i class="fab fa-react"></i> React</span>
+                            <span class="tech-pill"><i class="fab fa-node-js"></i> Node</span>
+                            <span class="tech-pill"><i class="fab fa-python"></i> Python</span>
+                            <span class="tech-pill"><i class="fab fa-aws"></i> AWS</span>
+                        </div>
+                        
+                        <!-- Mini trust line -->
+                        <div class="left-trust" aria-hidden="false">Trusted for building scalable and production-ready solutions</div>
+
+                        <!-- Compact left stats row -->
+                        <div class="left-stats-row" aria-label="Compact stats">
+                            <div class="stat-pill" tabindex="0">
+                                <div class="stat-num">40+</div>
+                                <div class="stat-label">Projects</div>
+                            </div>
+                            <div class="stat-pill" tabindex="0">
+                                <div class="stat-num">3+</div>
+                                <div class="stat-label">Years</div>
+                            </div>
+                            <div class="stat-pill" tabindex="0">
+                                <div class="stat-num">100%</div>
+                                <div class="stat-label">Satisfaction</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- App Development Service -->
-                <div class="service-card service-card-2">
-                    <div class="service-icon-wrapper">
-                        <div class="service-icon">
-                            <i class="fas fa-mobile-alt"></i>
+                <div class="freelance-right" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Services Grid -->
+                    <div class="freelance-services-grid" role="list">
+                        <!-- Web Development Service -->
+                        <div class="service-card service-card-1" role="listitem" tabindex="0">
+                            <div class="service-icon-wrapper">
+                                <div class="service-icon" aria-hidden="true">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <div class="service-glow" aria-hidden="true"></div>
+                            </div>
+                            <h3 class="service-title">Web Development</h3>
+                            <p class="service-description">Modern, responsive websites and web applications built with cutting-edge frameworks. React, Vue, Angular, Next.js, and more.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i>Responsive Design</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i>SEO Optimized</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i>Performance Focused</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i>Production Ready</li>
+                            </ul>
                         </div>
-                        <div class="service-glow"></div>
-                    </div>
-                    <h3 class="service-title">App Development</h3>
-                    <p class="service-description">Native and cross-platform mobile applications for iOS and Android. React Native, Flutter, and native technologies.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i>Cross-Platform Apps</li>
-                        <li><i class="fas fa-check-circle"></i>Native Performance</li>
-                        <li><i class="fas fa-check-circle"></i>App Store Ready</li>
-                        <li><i class="fas fa-check-circle"></i>Real-time Features</li>
-                    </ul>
-                </div>
 
-                <!-- AI/ML Solutions Service -->
-                <div class="service-card service-card-3">
-                    <div class="service-icon-wrapper">
-                        <div class="service-icon">
-                            <i class="fas fa-brain"></i>
+                        <!-- App Development Service -->
+                        <div class="service-card service-card-2" role="listitem" tabindex="0">
+                            <div class="service-icon-wrapper">
+                                <div class="service-icon" aria-hidden="true">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="service-glow" aria-hidden="true"></div>
+                            </div>
+                            <h3 class="service-title">App Development</h3>
+                            <p class="service-description">Native and cross-platform mobile applications for iOS and Android. React Native, Flutter, and native technologies.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i>Cross-Platform Apps</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i>Native Performance</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i>App Store Ready</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i>Real-time Features</li>
+                            </ul>
                         </div>
-                        <div class="service-glow"></div>
-                    </div>
-                    <h3 class="service-title">AI/ML Solutions</h3>
-                    <p class="service-description">Intelligent systems powered by machine learning and artificial intelligence. LLMs, computer vision, NLP, and predictive analytics.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i>Custom ML Models</li>
-                        <li><i class="fas fa-check-circle"></i>AI Integration</li>
-                        <li><i class="fas fa-check-circle"></i>Data Analytics</li>
-                        <li><i class="fas fa-check-circle"></i>Automation Solutions</li>
-                    </ul>
-                </div>
 
-                <!-- Cybersecurity Service -->
-                <div class="service-card service-card-4">
-                    <div class="service-icon-wrapper">
-                        <div class="service-icon">
-                            <i class="fas fa-shield-alt"></i>
+                        <!-- AI/ML Solutions Service -->
+                        <div class="service-card service-card-3" role="listitem" tabindex="0">
+                            <div class="service-icon-wrapper">
+                                <div class="service-icon" aria-hidden="true">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="service-glow" aria-hidden="true"></div>
+                            </div>
+                            <h3 class="service-title">AI/ML Solutions</h3>
+                            <p class="service-description">Intelligent systems powered by machine learning and artificial intelligence. LLMs, computer vision, NLP, and predictive analytics.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i>Custom ML Models</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i>AI Integration</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i>Data Analytics</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i>Automation Solutions</li>
+                            </ul>
                         </div>
-                        <div class="service-glow"></div>
+
+                        <!-- Cybersecurity Service -->
+                        <div class="service-card service-card-4" role="listitem" tabindex="0">
+                            <div class="service-icon-wrapper">
+                                <div class="service-icon" aria-hidden="true">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="service-glow" aria-hidden="true"></div>
+                            </div>
+                            <h3 class="service-title">Cybersecurity</h3>
+                            <p class="service-description">Secure, hardened systems and applications. Code security, encryption, threat assessment, and compliance implementation.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i>Security Audits</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i>Data Encryption</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i>Threat Protection</li>
+                                <li><i class="fas fa-check-circle" aria-hidden="true"></i>GDPR Compliant</li>
+                            </ul>
+                        </div>
                     </div>
-                    <h3 class="service-title">Cybersecurity</h3>
-                    <p class="service-description">Secure, hardened systems and applications. Code security, encryption, threat assessment, and compliance implementation.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i>Security Audits</li>
-                        <li><i class="fas fa-check-circle"></i>Data Encryption</li>
-                        <li><i class="fas fa-check-circle"></i>Threat Protection</li>
-                        <li><i class="fas fa-check-circle"></i>GDPR Compliant</li>
-                    </ul>
                 </div>
             </div>
 
@@ -3888,42 +3914,17 @@
                     <div class="metrics-content">
                         <h3 class="metrics-title">Track Record</h3>
                         <p class="metrics-description">Proven expertise with a strong portfolio of successful projects across industries and tech stacks.</p>
-                        <div class="freelance-ctas">
-                            <a href="#contact" class="cta-button cta-primary">
-                                <i class="fas fa-rocket"></i>
-                                <span>Hire Me Now</span>
-                            </a>
-                            <a href="mailto:sri.nxth@yahoo.com" class="cta-button cta-secondary">
-                                <i class="fas fa-envelope"></i>
-                                <span>Get in Touch</span>
-                            </a>
-                        </div>
                     </div>
                 </div>
 
-                <div class="freelance-right">
-                    <div class="freelance-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">40+</div>
-                            <div class="stat-label">Projects Delivered</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">3+</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Client Satisfaction</div>
-                        </div>
-                    </div>
-                </div>
+                <!-- freelance-right removed per request -->
             </div>
 
             <!-- Value Propositions -->
             <div class="freelance-values" data-aos="fade-up" data-aos-delay="300">
                 <div class="value-item">
                     <div class="value-icon">
-                        <i class="fas fa-bolt"></i>
+                        <i class="fas fa-bolt" aria-hidden="true"></i>
                     </div>
                     <div class="value-content">
                         <h4>Fast Turnaround</h4>
@@ -3933,7 +3934,7 @@
 
                 <div class="value-item">
                     <div class="value-icon">
-                        <i class="fas fa-comments"></i>
+                        <i class="fas fa-comments" aria-hidden="true"></i>
                     </div>
                     <div class="value-content">
                         <h4>Clear Communication</h4>
@@ -3943,7 +3944,7 @@
 
                 <div class="value-item">
                     <div class="value-icon">
-                        <i class="fas fa-code"></i>
+                        <i class="fas fa-code" aria-hidden="true"></i>
                     </div>
                     <div class="value-content">
                         <h4>Production-Ready Code</h4>
@@ -3953,7 +3954,7 @@
 
                 <div class="value-item">
                     <div class="value-icon">
-                        <i class="fas fa-handshake"></i>
+                        <i class="fas fa-handshake" aria-hidden="true"></i>
                     </div>
                     <div class="value-content">
                         <h4>Partnership Approach</h4>
@@ -4186,6 +4187,8 @@
                         <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
                         <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
                         <li><a href="#projects"><i class="fas fa-rocket"></i> Projects</a></li>
+                        <li><a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a></li>
+                        <li><a href="#freelance"><i class="fas fa-briefcase"></i> Freelance</a></li>
                         <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
                     </ul>
                 </div>
@@ -4301,9 +4304,13 @@
                 <p id="cert-modal-sub">Issuer • Year</p>
             </div>
             <div class="cert-modal-body" id="cert-modal-body">
-                <img id="cert-modal-image" src="" alt="certificate image" style="max-width:100%;border-radius:8px;margin-bottom:12px;display:none;" />
-                <p id="cert-modal-desc" style="color:var(--text-secondary)"></p>
-            </div>
+                        <img id="cert-modal-image" src="" alt="certificate image" style="max-width:100%;border-radius:8px;margin-bottom:12px;display:none;" />
+                        <p id="cert-modal-desc" style="color:var(--text-secondary)"></p>
+                        <div class="cert-modal-actions" style="margin-top:12px;display:flex;gap:10px;">
+                            <a id="cert-modal-view" class="btn btn-primary" href="#" target="_blank" rel="noopener" style="display:none;">View Full</a>
+                            <a id="cert-modal-download" class="btn btn-outline" href="#" download style="display:none;">Download</a>
+                        </div>
+                    </div>
         </div>
     </div>
 
@@ -4451,14 +4458,37 @@
             const subEl = document.getElementById('cert-modal-sub');
             const descEl = document.getElementById('cert-modal-desc');
             const imgEl = document.getElementById('cert-modal-image');
+            const viewBtn = document.getElementById('cert-modal-view');
+            const dlBtn = document.getElementById('cert-modal-download');
 
-            function openModal({title, sub, desc, img}){
+            function openModal({title, organization, year, desc, img, file}){
                 titleEl.textContent = title || '';
-                subEl.textContent = sub || '';
+                // show organization and year
+                const parts = [];
+                if(organization) parts.push(organization);
+                if(year) parts.push(year);
+                subEl.textContent = parts.join(' • ');
                 descEl.textContent = desc || '';
+
                 if(img){ imgEl.src = img; imgEl.style.display = 'block'; } else { imgEl.style.display = 'none'; }
+
+                // configure actions
+                if(file){
+                    dlBtn.href = file;
+                    dlBtn.style.display = 'inline-flex';
+                    // view uses image if available else file
+                    viewBtn.href = img || file;
+                    viewBtn.style.display = 'inline-flex';
+                } else {
+                    dlBtn.style.display = 'none';
+                    viewBtn.style.display = img ? 'inline-flex' : 'none';
+                    if(img) viewBtn.href = img;
+                }
+
                 modal.setAttribute('aria-hidden', 'false');
                 modal.classList.add('open');
+                // trap focus minimally
+                closeBtn.focus();
             }
 
             function closeModal(){
@@ -4470,21 +4500,54 @@
             backdrop?.addEventListener('click', closeModal);
             document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
 
-            document.querySelectorAll('.view-award').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    openModal({ title: btn.dataset.title, desc: btn.dataset.desc, sub: '' });
+            // Attach handlers to cert cards and preview buttons
+            document.querySelectorAll('.cert-card').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    // if user clicked a download link, let it proceed
+                    if(e.target.closest('.cert-download-btn')) return;
+                    const d = card.dataset || {};
+                    openModal({ title: d.title, organization: d.organization, year: d.year, desc: '', img: d.img, file: d.file });
                 });
             });
 
-            document.querySelectorAll('.cert-card').forEach(card => {
-                card.addEventListener('click', () => {
-                    const t = card.querySelector('.cert-title')?.textContent || 'Certificate';
-                    const org = card.querySelector('.cert-organization')?.textContent || '';
-                    openModal({ title: t, sub: org, desc: '' });
+            // preview buttons inside cards (prevent double open because card click also opens)
+            document.querySelectorAll('.cert-preview-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const card = btn.closest('.cert-card');
+                    if(!card) return;
+                    const d = card.dataset || {};
+                    openModal({ title: d.title, organization: d.organization, year: d.year, desc: '', img: d.img, file: d.file });
                 });
             });
         });
+    </script>
+    <script>
+        // WhatsApp CTA handler for elements with data-whatsapp
+        (function(){
+            function openWhatsApp(number, message){
+                number = String(number || '').replace(/\D/g,'');
+                if(!number) return;
+                if(number.length === 10){ // assume local 10-digit number, prefix India country code
+                    number = '91' + number;
+                }
+                var text = message || "Hi, I'm interested in your freelance services — please share availability and rates.";
+                var url = 'https://wa.me/' + number + '?text=' + encodeURIComponent(text);
+                window.open(url, '_blank', 'noopener');
+            }
+
+            document.addEventListener('DOMContentLoaded', function(){
+                document.querySelectorAll('[data-whatsapp]').forEach(function(el){
+                    el.addEventListener('click', function(e){
+                        e.preventDefault();
+                        var num = el.getAttribute('data-whatsapp');
+                        // optional: custom message via data-whatsapp-text
+                        var msg = el.getAttribute('data-whatsapp-text') || "Hi, I'm interested in your freelance services — please share availability and rates.";
+                        openWhatsApp(num, msg);
+                    });
+                });
+            });
+        })();
     </script>
 </body>
 </html>
