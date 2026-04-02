@@ -4315,7 +4315,12 @@
     </div>
 
     <!-- Custom JavaScript -->
-    <script>window.CONTACT_API_URL='http://localhost:5000';</script>
+    <script>
+        // Use the current origin in production; fall back to localhost for local file testing
+        window.CONTACT_API_URL = (window.location && window.location.protocol && window.location.protocol.startsWith('http'))
+            ? window.location.origin
+            : 'http://localhost:5000';
+    </script>
     <script src="main.js"></script>
     
     <!-- Enhanced Projects Section JavaScript -->
